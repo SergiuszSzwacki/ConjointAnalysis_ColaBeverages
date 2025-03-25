@@ -2,7 +2,7 @@
 Repozytorium zawiera kod pomagający w przeprowadzeniu badania preferencji konsumentów napojów gazowanych typu cola z wykorzystaniem metody conjoint analysis
 
 ### Wstęp:
-W Pythonie, analogicznie do kodu w R z wykorzystaniem biblioteki **AlgDesign**, można stworzyć cząstkowy układ czynnikowy za pomocą biblioteki **pyDOE2** oraz dodatkowych metod optymalizacji. Niestety, pyDOE2 nie posiada bezpośredniego odpowiednika funkcji `optFederov` z AlgDesign, ale można użyć innych narzędzi, takich jak `sklearn` (do optymalizacji) do redukcji profili.
+W Pythonie, analogicznie do kodu w R z wykorzystaniem biblioteki **AlgDesign**, można stworzyć cząstkowy układ czynnikowy za pomocą biblioteki **pyDOE2** oraz dodatkowych metod optymalizacji. Niestety, pyDOE2 nie posiada bezpośredniego odpowiednika funkcji `optFederov` z AlgDesign, w związku z tym został użyty `sklearn` (do optymalizacji) do redukcji profili.
 
 
 ---
@@ -35,6 +35,6 @@ W Pythonie, analogicznie do kodu w R z wykorzystaniem biblioteki **AlgDesign**, 
 ---
 
 
-###Wynik:
+### Wynik:
    - Kod wygeneruje pełny plan czynnikowy zawierający wszystkie kombinacje atrybutów i ich poziomów. Dla podanych danych będzie to $$4 \times 2 \times 3 \times 3 = 72$$ kombinacji.
    - Kod wygeneruje cząstkowy układ czynnikowy składający się z 14 profili, które są losowo wybrane z pełnego układu. Profile będą numerowane zgodnie z ich indeksami w pełnym układzie, co odpowiada podejściu stosowanemu w AlgDesign.
